@@ -1,10 +1,11 @@
 import React from 'react';
-import './components/css/App.css';
+import Home from './pages/Home';
+import './pages/modules/styles/css/App.css';
 
 function App() {
   return (
     <div>
-      Intit
+      <Home />
     </div>
   );
 }
