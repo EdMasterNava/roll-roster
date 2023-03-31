@@ -76,12 +76,13 @@ const theme = {
     h4: {
       ...rawTheme.typography.h4,
       ...fontHeader,
-      fontSize: 36,
+      fontSize: 26,
+      fontWeight: rawTheme.typography.fontWeightMedium
     },
     h5: {
       ...rawTheme.typography.h5,
       fontSize: 20,
-      fontWeight: rawTheme.typography.fontWeightLight,
+      fontWeight: rawTheme.typography.fontWeightRegular,
     },
     h6: {
       ...rawTheme.typography.h6,

@@ -1,7 +1,19 @@
-import { makeStyles } from "@mui/material";
+const style = () => ({
+    rightNav: {
+        marginLeft: 3
+    },
+    flex: {
+        flex: 1
+    },
+    sidebar: {
+        zIndex: 1
+    },
+    sidebarContent: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center'
+    }
 
-const useStyles = makeStyles((theme) => ({
-    //Any custom class styling goes here
-}));
+});
 
-export default useStyles;
+export default style;
