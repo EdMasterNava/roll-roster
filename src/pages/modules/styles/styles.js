@@ -10,8 +10,11 @@ const style = () => ({
     },
     sidebarContent: {
         display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center'
+        flexDirection: 'column'
+    },
+    sidebarButtons: {
+        width: '100%',
+        disply: 'flex'
     }
 
 });

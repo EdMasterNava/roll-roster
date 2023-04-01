@@ -7,10 +7,16 @@ import Typography from '../components/Typography';
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import Drawer from '@mui/material/Drawer';
+import ListItem from '@mui/material/ListItem';
 import IconButton from '@mui/material/IconButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemButton from '@mui/material/ListItemButton';
 
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import EventRoundedIcon from '@mui/icons-material/EventRounded';
+import CalendarMonthRoundedIcon from '@mui/icons-material/CalendarMonthRounded';
 
 import style from '../styles/styles';
 
@@ -46,19 +52,28 @@ function Navbar() {
             </Box>
           </Toolbar>
         </AppBar>
-        
+
         <Drawer open={open} onClose={toggleDrawer} sx={{...css.sidebar}}>
-            <Toolbar sx={{width: {xs: '100vw', md: 240}}} />
-            <Box sx={{...css.sidebarContent}}>
+            <Toolbar sx={{width: {xs: '100vw', md: 260}}} />
+            <Box>
                 <List>
-                   <Typography>
-                        Find Event
-                    </Typography>
-                    <Typography>
-                        Plan Event
-                    </Typography>  
+                    <ListItem disablePadding sx={{...css.sidebarContent}}>
+                        <ListItemButton sx={{...css.sidebarButtons}}>
+                            <ListItemIcon>
+                                <EventRoundedIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="Find Events" />
+                        </ListItemButton>
+                        <ListItemButton sx={{...css.sidebarButtons}}>
+                            <ListItemIcon>
+                                <CalendarMonthRoundedIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="Plan Events" />
+                        </ListItemButton>
+                    </ListItem> 
                 </List>
             </Box>
+            
         </Drawer>
       </>
     );
