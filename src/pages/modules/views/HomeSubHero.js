@@ -1,6 +1,5 @@
 import * as React from 'react';
 
-import Toolbar from '../components/Toolbar';
 import Typography from '../components/Typography';
 
 import Box from '@mui/material/Box';
@@ -17,25 +16,17 @@ function HomeSubHero() {
                 <Grid container sx={{px: 3.8}}>
                     <Grid item xs={12} sm={6} >
                         <Typography color="white" variant="h1" 
-                                    sx={{   display: {xs: 'none', sm: 'block'},
-                                            justifySelf: 'center'
-                                    }}
-                                >
+                                    sx={{ display: {xs: 'none', sm: 'block'} }}>
                             Planning an Event?
                         </Typography>
                         <Typography color="white" variant="h2" 
-                                    sx={{   display: {xs: 'block', sm: 'none'},
-                                            
-                                    }}
-                                >
+                                    sx={{ display: {xs: 'block', sm: 'none'} }}>
                             Planning an Event?
                         </Typography>
                     </Grid>
                     <Grid item  xs={12} sm={6} sx={{display: 'flex'}}>
-                        <Button variant='contained' sx={{...css.heroButton,
-                                                            alignSelf: 'center'
-                                                    }}
-                                                >
+                        <Button variant='contained' 
+                                sx={{...css.heroButton, alignSelf: 'center' }} >
                             <Typography color="white" variant="h6">
                                 Planning Starts Here
                             </Typography>

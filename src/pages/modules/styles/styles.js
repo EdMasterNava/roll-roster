@@ -1,5 +1,8 @@
 const style = () => ({
     rightNav: {
+        '&:hover': {
+            color: '#3b7ad8'
+        },
         marginLeft: 3
     },
     flex: {

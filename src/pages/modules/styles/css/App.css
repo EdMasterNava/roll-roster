@@ -62,3 +62,11 @@ svg {
     scroll-behavior: auto !important;
   }
 }
+/* Custom CSS */
+.link {
+  color: inherit;
+  text-decoration: none;
+}
+.center {
+  align-self: center;
+}

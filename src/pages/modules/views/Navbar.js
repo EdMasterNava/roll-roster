@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 
 import AppBar from '../components/AppBar';
 import Toolbar from '../components/Toolbar';
@@ -34,21 +35,26 @@ function Navbar() {
                 <IconButton size="large" edge="start" color="inherit"  onClick={toggleDrawer}>
                     {open ? <CloseIcon fontSize="large"/> : <MenuIcon fontSize="large"/>}
                 </IconButton>
-                <Typography variant="h4" sx={{alignSelf: 'center'}}>
-                    Roll Roster
-                </Typography>
+                <Link to="/" className="link center">
+                    <Typography variant="h4">
+                        Roll Roster
+                    </Typography>
+                </Link>
+                
             </Box>
             
             <Box sx={{ ...css.flex, display: 'flex', justifyContent: 'flex-end' }}>
                 <Typography variant="h6" sx={{...css.rightNav}}>
                     Log In
                 </Typography>
-                <Typography variant="h6" sx={{...css.rightNav, display: {xs: 'none', sm: 'flex'}}}>
-                    Create Free Account
-                </Typography>
-                <Typography variant="h6" sx={{...css.rightNav, display: {xs: 'flex', sm: 'none'}}}>
-                    Join
-                </Typography>
+                <Link to="/join" className="link">
+                    <Typography variant="h6" sx={{...css.rightNav, display: {xs: 'none', sm: 'flex'}}}>
+                        Create Free Account
+                    </Typography>
+                    <Typography variant="h6" sx={{...css.rightNav, display: {xs: 'flex', sm: 'none'}}}>
+                        Join
+                    </Typography>
+                </Link>
             </Box>
           </Toolbar>
         </AppBar>
