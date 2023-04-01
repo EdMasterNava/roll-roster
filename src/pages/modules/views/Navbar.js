@@ -40,13 +40,13 @@ function Navbar() {
             </Box>
             
             <Box sx={{ ...css.flex, display: 'flex', justifyContent: 'flex-end' }}>
-                <Typography sx={{...css.rightNav}}>
+                <Typography variant="h6" sx={{...css.rightNav}}>
                     Log In
                 </Typography>
-                <Typography sx={{...css.rightNav, display: {xs: 'none', sm: 'flex'}}}>
+                <Typography variant="h6" sx={{...css.rightNav, display: {xs: 'none', sm: 'flex'}}}>
                     Create Free Account
                 </Typography>
-                <Typography sx={{...css.rightNav, display: {xs: 'flex', sm: 'none'}}}>
+                <Typography variant="h6" sx={{...css.rightNav, display: {xs: 'flex', sm: 'none'}}}>
                     Join
                 </Typography>
             </Box>
@@ -54,7 +54,7 @@ function Navbar() {
         </AppBar>
 
         <Drawer open={open} onClose={toggleDrawer} sx={{...css.sidebar}}>
-            <Toolbar sx={{width: {xs: '100vw', md: 260}}} />
+            <Toolbar sx={{width: {xs: '100vw', md: 240}}} />
             <Box>
                 <List>
                     <ListItem disablePadding sx={{...css.sidebarContent}}>
@@ -62,13 +62,13 @@ function Navbar() {
                             <ListItemIcon>
                                 <EventRoundedIcon />
                             </ListItemIcon>
-                            <ListItemText primary="Find Events" />
+                            <ListItemText primary="Find Events" variant="h6"/>
                         </ListItemButton>
                         <ListItemButton sx={{...css.sidebarButtons}}>
                             <ListItemIcon>
                                 <CalendarMonthRoundedIcon />
                             </ListItemIcon>
-                            <ListItemText primary="Plan Events" />
+                            <ListItemText primary="Plan Events" variant="h6"/>
                         </ListItemButton>
                     </ListItem> 
                 </List>

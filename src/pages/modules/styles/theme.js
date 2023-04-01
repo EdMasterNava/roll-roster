@@ -29,11 +29,11 @@ const rawTheme = createTheme({
     },
   },
   typography: {
-    fontFamily: "'Work Sans', sans-serif",
+    fontFamily: "'Raleway', sans-serif",
     fontSize: 14,
-    fontWeightLight: 300, // Work Sans
-    fontWeightRegular: 400, // Work Sans
-    fontWeightMedium: 700, // Roboto Condensed
+    fontWeightLight: 300,
+    fontWeightRegular: 400,
+    fontWeightBold: 700,
   },
 });
 
@@ -61,12 +61,14 @@ const theme = {
       ...rawTheme.typography.h1,
       ...fontHeader,
       letterSpacing: 0,
-      fontSize: 60,
+      fontSize: 65,
+      fontWeight: rawTheme.typography.fontWeightBold
     },
     h2: {
       ...rawTheme.typography.h2,
       ...fontHeader,
-      fontSize: 48,
+      fontSize: 55,
+      fontWeight: rawTheme.typography.fontWeightBold
     },
     h3: {
       ...rawTheme.typography.h3,
@@ -77,7 +79,7 @@ const theme = {
       ...rawTheme.typography.h4,
       ...fontHeader,
       fontSize: 26,
-      fontWeight: rawTheme.typography.fontWeightMedium
+      fontWeight: rawTheme.typography.fontWeightBold
     },
     h5: {
       ...rawTheme.typography.h5,
