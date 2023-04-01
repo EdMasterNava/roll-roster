@@ -49,6 +49,10 @@ const style = () => ({
         mt: 2,
         py: 2,
         px: 6
+    },
+    subHero: {
+        backgroundColor: 'black',
+        py: 10
     }
 
 });
