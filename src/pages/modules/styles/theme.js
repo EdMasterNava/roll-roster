@@ -73,7 +73,8 @@ const theme = {
     h3: {
       ...rawTheme.typography.h3,
       ...fontHeader,
-      fontSize: 42,
+      fontSize: 40,
+      fontWeight: rawTheme.typography.fontWeightBold
     },
     h4: {
       ...rawTheme.typography.h4,

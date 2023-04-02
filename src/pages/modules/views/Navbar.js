@@ -44,9 +44,12 @@ function Navbar() {
             </Box>
             
             <Box sx={{ ...css.flex, display: 'flex', justifyContent: 'flex-end' }}>
-                <Typography variant="h6" sx={{...css.rightNav}}>
-                    Log In
-                </Typography>
+                <Link to="/login" className="link">
+                    <Typography variant="h6" sx={{...css.rightNav}}>
+                        Log In
+                    </Typography>
+                </Link>
+                
                 <Link to="/join" className="link">
                     <Typography variant="h6" sx={{...css.rightNav, display: {xs: 'none', sm: 'flex'}}}>
                         Create Free Account

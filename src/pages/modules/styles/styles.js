@@ -1,7 +1,7 @@
 const style = () => ({
     rightNav: {
         '&:hover': {
-            color: '#3b7ad8'
+            color: '#5186d5'
         },
         marginLeft: 3
     },
@@ -9,7 +9,7 @@ const style = () => ({
         flex: 1
     },
     sidebar: {
-        zIndex: 1
+        zIndex: 3
     },
     sidebarContent: {
         flexDirection: 'column',
@@ -37,8 +37,8 @@ const style = () => ({
     },
     heroContainer: {
         position: 'relative',
-        maxWidth: 600,
-        height: '100%',  
+        height: '100%', 
+        maxWidth: 600, 
         px: 3.8,
         pt: 15
     },
@@ -56,6 +56,32 @@ const style = () => ({
     subHero: {
         backgroundColor: 'black',
         py: 10
+    },
+    joinFormPNG: {
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: '600px',
+        position: 'absolute',
+        left: -230,
+        zIndex: 1,
+        bottom: 0,
+        right: 0,
+        top: 200
+    },
+    joinFormGridContainer: {
+        height: '100%', 
+        width: '98.5vw', 
+        ml: '1.5vw'
+    },
+    form: {
+        flexDirection: 'column',
+        position: 'relative',
+        display: 'flex',
+        maxWidth: 500,
+        marginTop: 8,
+        mx: 'auto',
+        zIndex: 2,
+        py: 5,
+        px: 2
     }
 
 });

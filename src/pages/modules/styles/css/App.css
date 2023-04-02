@@ -70,3 +70,9 @@ svg {
 .center {
   align-self: center;
 }
+.highlight {
+  color: #3b7ad8;
+}
+.highlight:hover {
+  color: #3265b1;
+}
