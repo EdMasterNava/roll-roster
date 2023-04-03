@@ -45,10 +45,9 @@ function JoinForm() {
     };
     return (
         <>
-            <Box sx={{height: 1000, bgcolor: '#96ddf5'}}>
+            <Box sx={{minHeight: '100vh', bgcolor: '#96ddf5'}}>
                 <Grid container sx={{...css.joinFormGridContainer}}>
-                    <Grid item xs={12} lg={9} sx={{bgcolor: 'white'}}>
-                        <Toolbar />
+                    <Grid item xs={12} lg={9} sx={{...css.formContainer, bgcolor: 'white'}}>
                         <Box sx={{bgcolor: ''}}>
                             <Paper  sx={{...css.form}}>
                                 <Typography variant="h3">
@@ -110,7 +109,7 @@ function JoinForm() {
                                     </FormControl>
                                     <Button component="submit" variant='contained' sx={{...css.heroButton, mt: 6, width: '100%'}}>
                                         <Typography color="white" variant="h6">
-                                            Submit
+                                            Join
                                         </Typography>
                                     </Button>
                                 </Box>

@@ -68,9 +68,15 @@ const style = () => ({
         top: 200
     },
     joinFormGridContainer: {
-        height: '100%', 
+        minHeight: '100vh', 
         width: '98.5vw', 
         ml: '1.5vw'
+    },
+    formContainer: {
+        justifyContent: 'center', 
+        alignItems: 'center',
+        display: 'flex',
+        px: 2
     },
     form: {
         flexDirection: 'column',
@@ -78,10 +84,14 @@ const style = () => ({
         display: 'flex',
         maxWidth: 500,
         marginTop: 8,
-        mx: 'auto',
         zIndex: 2,
         py: 5,
         px: 2
+    },
+    loginImg: {
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        backgroundSize: 'cover'
     }
 
 });
