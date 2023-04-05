@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
-import Toolbar from '../components/Toolbar';
 import Typography from '../components/Typography';
 
 import Box from '@mui/material/Box';
@@ -46,7 +45,9 @@ function LoginForm() {
     return (
         <>
             <Grid container component="main" sx={{ minHeight: '100vh' }}>
-                <Grid item xs={false} sm={6} md={7} sx={{...css.loginImg, backgroundImage: `url(${png})`}}/>
+                <Grid item xs={false} sm={6} md={7} sx={{...css.loginImg, backgroundImage: `url(${png})`}}>
+                    <Box sx={{...css.loginOverlay}}/>
+                </Grid>
                 <Grid item xs={12} sm={6} md={5} component={Paper} elevation={6} square sx={{...css.formContainer}}>
                     <Box sx={{bgcolor: ''}}>
                         <Paper  sx={{...css.form}}>

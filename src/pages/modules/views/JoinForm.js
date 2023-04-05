@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
-import Toolbar from '../components/Toolbar';
 import Typography from '../components/Typography';
 
 import Box from '@mui/material/Box';
@@ -36,7 +35,7 @@ function MyFormHelperText() {
 
 function JoinForm() {
     const css  = style();
-    const png = require('./img/bjj-throw-no-bg.png');
+    const png = require('./img/bjj-throw-no-bg2.png');
 
     const [showPassword, setShowPassword] = React.useState(false);
     const handleClickShowPassword = () => setShowPassword((show) => !show);

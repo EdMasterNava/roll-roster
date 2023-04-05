@@ -8,11 +8,10 @@ import withRoot from './modules/styles/withRoot';
 
 
 function Home() {
-    const heroImg = require('./modules/views/img/jiujitsu.avif')
     return (
         <>
             <Navbar />
-            <HomeHero heroImg={heroImg}/>
+            <HomeHero />
             <HomeSubHero />
         </>
     );
