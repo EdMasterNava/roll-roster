@@ -61,11 +61,11 @@ const style = () => ({
         backgroundRepeat: 'no-repeat',
         backgroundSize: '600px',
         position: 'absolute',
-        left: -230,
+        left: -190,
         zIndex: 1,
         bottom: 0,
         right: 0,
-        top: 200
+        top: 150
     },
     joinFormGridContainer: {
         minHeight: '100vh', 
@@ -92,7 +92,51 @@ const style = () => ({
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
         backgroundSize: 'cover'
+    },
+    loginOverlay: {
+        backgroundColor: 'rgba(0,0,0,0.2)',
+        minHeight: '100vh',
+        minWidth: '100vw'
+    },
+    rowButton: {
+        justifyContent: 'space-between', 
+        alignItems: 'stretch',
+        display: 'flex',   
+        mt: 0.5
+    },
+    startCell: {
+        justifyContent: 'center',
+        borderBottom: 'none',
+        alignItems: 'center', 
+        display: 'flex', 
+        flexShrink: 0, 
+        width: 90, 
+        p: 0,  
+    },
+    middleCell: {
+        borderBottom: 'none',
+        flex: '1 1 auto'
+    },
+    endCell: {
+        justifyContent: 'flex-end',
+        alignItems: 'center',  
+        borderBottom: 'none',
+        display: 'flex',
+        flexShrink: 0,
+        width: 60  
+    },
+    drawerCell: {
+        paddingBottom: 0, 
+        paddingTop: 0
+    },
+    drawerButton: {
+        '&:hover': {bgcolor: 'darkslategray'},
+        textTransform: 'none',
+        bgcolor: 'darkcyan',
+        borderRadius: 0,
+        width: '100%'    
     }
+
 
 });
 

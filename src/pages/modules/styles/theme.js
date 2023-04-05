@@ -94,12 +94,13 @@ const theme = {
     },
     subtitle1: {
       ...rawTheme.typography.subtitle1,
-      fontSize: 18,
+      fontSize: 14,
+      fontWeight: rawTheme.typography.fontWeightBold
     },
     body1: {
       ...rawTheme.typography.body2,
-      fontWeight: rawTheme.typography.fontWeightRegular,
-      fontSize: 16,
+      fontWeight: rawTheme.typography.fontWeightLight,
+      fontSize: 14,
     },
     body2: {
       ...rawTheme.typography.body1,

@@ -76,3 +76,8 @@ svg {
 .highlight:hover {
   color: #3265b1;
 }
+.row {
+  background-color: transparent;
+  border: none;
+  width: 100%
+}
