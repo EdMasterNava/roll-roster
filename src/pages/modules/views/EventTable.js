@@ -25,7 +25,7 @@ import ArrowDropUpRoundedIcon from '@mui/icons-material/ArrowDropUpRounded';
 import jjwlJSON from '../json/JJWL';
 import style from '../styles/styles';
 
-function EventListItem() {
+function EventTable() {
     const css  = style();
     const rows = jjwlJSON;
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
@@ -37,7 +37,7 @@ function EventListItem() {
                     <Toolbar/>
                     <TableContainer>
                         <Table>
-                            {months.map((month) => (
+                            {months.map((month, index) => (
                                 <>
                                     <TableHead>
                                         <TableRow>
@@ -49,21 +49,21 @@ function EventListItem() {
                                         </TableRow>
                                     </TableHead>
                                     <TableBody>
-                                        {rows.jjwlJSON.map((row) => (
-                                            <Row key={row["event_name"]} row={row} />
-                                        ))}
+                                        {rows.jjwlJSON.map((row) => {
+                                            const startMonth = new Date(row["event_start_date"]).getMonth();
+                                            if(index === startMonth){
+                                                return <Row key={row["event_name"]} row={row} />
+                                            } 
+                                        })}
                                     </TableBody> 
                                 </>   
                             ))}
-                            
                         </Table>
                     </TableContainer>
-                    
-
                 </Box>
             </Box>
         </>
     )
 }
 
-export default EventListItem;
+export default EventTable;

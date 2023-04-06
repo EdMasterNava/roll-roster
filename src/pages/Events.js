@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import Navbar from './modules/views/Navbar';
-import EventListItem from './modules/views/EventListItem';
+import EventTable from './modules/views/EventTable';
 
 import withRoot from './modules/styles/withRoot';
 
@@ -11,7 +11,7 @@ function Events() {
             <Navbar />
             {/* Search */}
             {/* Rendered List */}
-            <EventListItem />
+            <EventTable />
         </>
     )
 }

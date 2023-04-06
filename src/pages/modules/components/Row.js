@@ -20,13 +20,25 @@ function Row(props) {
     const handleClick = () => {
         setOpen(prev => !prev);
     }
-
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
+                    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    const startMonth = months[new Date(row["event_start_date"]).getMonth()];
+    const startDate = new Date(row["event_start_date"]).getDate();
+    const endMonth = months[new Date(row["event_end_date"]).getMonth()];
+    const endDate = new Date(row["event_end_date"]).getDate();
     return (
         <>
             <TableRow component='button' onClick={handleClick} className='row' sx={{...css.rowButton}}>
                     <TableCell sx={{...css.startCell}}>
-                        <Box sx={{bgcolor: 'darkcyan', height: 80, width: 90}}>
-                            Date
+                        <Box sx={{...css.dateContainer, bgcolor: 'darkcyan'}}>
+                            <Typography variant="h5">
+                                {`${startMonth} ${startDate}`}
+                            </Typography>
+                            {row["event_start_date"] !== row["event_end_date"] ? 
+                                <Typography variant="h5">
+                                    {`${endMonth} ${endDate}`}
+                                </Typography> : <></>
+                            }
                         </Box>
                     </TableCell>
                     <TableCell sx={{...css.middleCell}}>

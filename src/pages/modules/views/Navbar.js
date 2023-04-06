@@ -61,18 +61,19 @@ function Navbar() {
             </Box>
           </Toolbar>
         </AppBar>
-
         <Drawer open={open} onClose={toggleDrawer} sx={{...css.sidebar}}>
             <Toolbar sx={{width: {xs: '100vw', md: 240}}} />
             <Box>
                 <List>
                     <ListItem disablePadding sx={{...css.sidebarContent}}>
-                        <ListItemButton sx={{...css.sidebarButtons}}>
-                            <ListItemIcon>
-                                <EventRoundedIcon />
-                            </ListItemIcon>
-                            <ListItemText primary="Find Events" variant="h6"/>
-                        </ListItemButton>
+                        <Link to="/events" className="link fullWidth">
+                            <ListItemButton onClick={toggleDrawer} sx={{...css.sidebarButtons}}>
+                                <ListItemIcon>
+                                    <EventRoundedIcon />
+                                </ListItemIcon>
+                                <ListItemText primary="Find Events" variant="h6"/>
+                            </ListItemButton>
+                        </Link>
                         <ListItemButton sx={{...css.sidebarButtons}}>
                             <ListItemIcon>
                                 <CalendarMonthRoundedIcon />

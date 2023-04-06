@@ -101,6 +101,7 @@ const style = () => ({
     rowButton: {
         justifyContent: 'space-between', 
         alignItems: 'stretch',
+        cursor: 'pointer',
         display: 'flex',   
         mt: 0.5
     },
@@ -109,7 +110,7 @@ const style = () => ({
         borderBottom: 'none',
         alignItems: 'center', 
         display: 'flex', 
-        flexShrink: 0, 
+        flexShrink: 0,
         width: 90, 
         p: 0,  
     },
@@ -135,6 +136,14 @@ const style = () => ({
         bgcolor: 'darkcyan',
         borderRadius: 0,
         width: '100%'    
+    },
+    dateContainer: {
+        justifyContent: 'center',
+        flexDirection: 'column',
+        alignItems: 'center',
+        display: 'flex', 
+        height: 80, 
+        width: 90
     }
 
 
