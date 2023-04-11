@@ -5,27 +5,31 @@ import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
 import FilledInput from '@mui/material/FilledInput';
 
+import CloseIcon from '@mui/icons-material/Close';
 import SearchIcon from '@mui/icons-material/Search';
 import IconButton from '@mui/material/IconButton';
 
 function Search(props) {
+    const handleSearch = props.handleSearch;
     const [search, setSearch] = React.useState('');
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        props.handleSearch(search);
+    const handleClear = () => {
+        setSearch('');
     }
-    React.useEffect(() => {props.handleSearch(search)}, [search]);
+    React.useEffect(() => {handleSearch(search)}, [search]);
 
     return (
         <>
-            <Paper component="form" onSubmit={handleSubmit} sx={{bgcolor: 'white', mb: 2}}>
+            <Paper component="form" sx={{bgcolor: 'white', mb: 2}}>
                 <FormControl fullWidth variant="filled">
                     <InputLabel>Search</InputLabel>
                     <FilledInput    onChange={(e)=>setSearch(e.target.value)}
-                                    endAdornment={
-                                        <IconButton type='submit'>
-                                            <SearchIcon/>
-                                        </IconButton>
+                                    value={search}
+                                    endAdornment={ 
+                                        search === '' ?
+                                        <SearchIcon/> :
+                                        <IconButton onClick={handleClear}>
+                                            <CloseIcon/>
+                                        </IconButton> 
                                     }/>
                 </FormControl>
             </Paper>
