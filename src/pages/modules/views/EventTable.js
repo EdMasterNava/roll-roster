@@ -1,67 +1,68 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
 
-import Toolbar from '../components/Toolbar';
 import Typography from '../components/Typography';
 
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
-import Button from '@mui/material/Button';
-import Divider from '@mui/material/Divider';
-
+import Paper from '@mui/material/Paper'
 import Table from '@mui/material/Table';
-import Collapse from '@mui/material/Collapse';
 import TableRow from '@mui/material/TableRow';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
 import TableHead from '@mui/material/TableHead';
 import TableContainer from '@mui/material/TableContainer';
+
 import Row from '../components/Row'
 
-import ArrowDropDownRoundedIcon from '@mui/icons-material/ArrowDropDownRounded';
-import ArrowDropUpRoundedIcon from '@mui/icons-material/ArrowDropUpRounded';
-
-import jjwlJSON from '../json/JJWL';
-import style from '../styles/styles';
-
-function EventTable() {
-    const css  = style();
-    const rows = jjwlJSON;
+function EventTable(props) {
+    const events = props.events;
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
                     'August', 'September', 'October', 'November', 'December'];
+    const eventsByMonth = events.reduce((acc, event) => {
+        const month = new Date(event["event_start_date"]).getMonth();
+        if (!acc[month]) {
+          acc[month] = [];
+        }
+        acc[month].push(event);
+        return acc;
+    }, {});
+    const sortedMonthsWithEvents = Object.keys(eventsByMonth).map(monthInt => parseInt(monthInt)).sort((a, b) => a - b);
+
+    const [activeId, setActiveId] = React.useState(-1);
+    const handleActiveId = (event) => {
+        const id = parseInt(event.currentTarget.id);
+        if(id === activeId){
+            setActiveId(-1);
+        }else {
+            setActiveId(id);
+        }
+    }
     return (
         <>
-            <Box sx={{bgcolor: 'darkslategray', minHeight: '100vh', px: 1}}>
-                <Box sx={{bgcolor: 'black', minHeight: '100vh'}}>
-                    <Toolbar/>
-                    <TableContainer>
-                        <Table>
-                            {months.map((month, index) => (
-                                <>
-                                    <TableHead>
-                                        <TableRow>
-                                            <TableCell>
-                                                <Typography variant="h6" color="white">
-                                                    {month}
-                                                </Typography>
-                                            </TableCell>
-                                        </TableRow>
-                                    </TableHead>
-                                    <TableBody>
-                                        {rows.jjwlJSON.map((row) => {
-                                            const startMonth = new Date(row["event_start_date"]).getMonth();
-                                            if(index === startMonth){
-                                                return <Row key={row["event_name"]} row={row} />
-                                            } 
-                                        })}
-                                    </TableBody> 
-                                </>   
-                            ))}
-                        </Table>
-                    </TableContainer>
-                </Box>
-            </Box>
+            <TableContainer component={Paper}>
+                <Table>
+                    {sortedMonthsWithEvents.map((month) => (
+                        <>
+                            <TableHead>
+                                <TableRow>
+                                    <TableCell>
+                                        <Typography variant="h6">
+                                            {months[month]}
+                                        </Typography>
+                                    </TableCell>
+                                </TableRow>
+                            </TableHead>
+                            <TableBody>
+                                {eventsByMonth[month].map(event => {
+                                    return <Row key={event["event_id"]} 
+                                                row={event}
+                                                handleActiveId={handleActiveId}
+                                                activeId={activeId}
+                                            /> 
+                                })}
+                            </TableBody> 
+                        </>   
+                    ))}
+                </Table>
+            </TableContainer>
         </>
     )
 }
