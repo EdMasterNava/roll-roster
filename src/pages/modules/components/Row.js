@@ -16,10 +16,8 @@ import style from '../styles/styles';
 function Row(props) {
     const css  = style();
     const row = props.row;
-    const [open, setOpen] = React.useState(false);
-    const handleClick = () => {
-        setOpen(prev => !prev);
-    }
+    const handleActiveId = props.handleActiveId;
+    const open = props.activeId === row["event_id"];
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
                     'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
     const startMonth = months[new Date(row["event_start_date"]).getMonth()];
@@ -28,7 +26,7 @@ function Row(props) {
     const endDate = new Date(row["event_end_date"]).getDate();
     return (
         <>
-            <TableRow component='button' onClick={handleClick} className='row' sx={{...css.rowButton}}>
+            <TableRow component="button" onClick={handleActiveId} id={row["event_id"]}className="row" sx={{...css.rowButton}}>
                     <TableCell sx={{...css.startCell}}>
                         <Box sx={{...css.dateContainer, bgcolor: 'darkcyan'}}>
                             <Typography variant="h5">
@@ -42,20 +40,20 @@ function Row(props) {
                         </Box>
                     </TableCell>
                     <TableCell sx={{...css.middleCell}}>
-                        <Typography variant="subtitle1" color="white">
+                        <Typography variant="subtitle1" >
                             {row["event_name"]}
                         </Typography>
-                        <Typography variant="body1" color="white">
+                        <Typography variant="body1" >
                             {row["event_venue"]}
                         </Typography>
                         {open ? 
-                            <Typography variant="body1" color="white">
+                            <Typography variant="body1" >
                                 Hosted by {row["event_host"]}
                             </Typography> : <></>}
                     </TableCell>
                     <TableCell sx={{...css.endCell}}>
                         <Box>
-                            {open ? <ArrowDropUpRoundedIcon sx={{color: 'white'}}/> : <ArrowDropDownRoundedIcon sx={{color: 'white'}}/>}
+                            {open ? <ArrowDropUpRoundedIcon sx={{}}/> : <ArrowDropDownRoundedIcon sx={{}}/>}
                         </Box>
                     </TableCell>
             </TableRow>
