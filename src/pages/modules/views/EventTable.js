@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import Typography from '../components/Typography';
 
+import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper'
 import Table from '@mui/material/Table';
 import TableRow from '@mui/material/TableRow';
@@ -37,32 +38,40 @@ function EventTable(props) {
     }
     return (
         <>
-            <TableContainer component={Paper}>
-                <Table>
-                    {sortedMonthsWithEvents.map((month) => (
-                        <>
-                            <TableHead>
-                                <TableRow>
-                                    <TableCell>
-                                        <Typography variant="h6">
-                                            {months[month]}
-                                        </Typography>
-                                    </TableCell>
-                                </TableRow>
-                            </TableHead>
-                            <TableBody>
-                                {eventsByMonth[month].map(event => {
-                                    return <Row key={event["event_id"]} 
-                                                row={event}
-                                                handleActiveId={handleActiveId}
-                                                activeId={activeId}
-                                            /> 
-                                })}
-                            </TableBody> 
-                        </>   
-                    ))}
-                </Table>
-            </TableContainer>
+            {sortedMonthsWithEvents.length !== 0 ?
+                <TableContainer component={Paper}>
+                    <Table>
+                        {sortedMonthsWithEvents.map((month) => (
+                            <>
+                                <TableHead>
+                                    <TableRow>
+                                        <TableCell>
+                                            <Typography variant="h6">
+                                                {months[month]}
+                                            </Typography>
+                                        </TableCell>
+                                    </TableRow>
+                                </TableHead>
+                                <TableBody>
+                                    {eventsByMonth[month].map(event => {
+                                        return <Row key={event["event_id"]} 
+                                                    row={event}
+                                                    handleActiveId={handleActiveId}
+                                                    activeId={activeId}
+                                                /> 
+                                    })}
+                                </TableBody> 
+                            </>   
+                        ))}
+                    </Table>
+                </TableContainer> :
+                <Box sx={{mx: 20}}>
+                    <Typography variant="h5" align="center">
+                        No Events Found
+                    </Typography>
+                </Box>
+                
+            }
         </>
     )
 }
