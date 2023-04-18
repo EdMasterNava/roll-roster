@@ -16,7 +16,7 @@ import jjwlJSON from './modules/json/JJWL';
 
 function Events() {
     const completeEventList = jjwlJSON.jjwlJSON;
-    const searchKey = {keys: ["event_name", "event_venue"]};
+    const searchKey = {keys: ["event_name", "event_venue", "event_host"]};
     const [events, setEvents] = React.useState(completeEventList);
     const [searchInput, setSearchInput] = React.useState('');
     React.useEffect(() => {

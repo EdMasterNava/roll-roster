@@ -46,10 +46,9 @@ function Row(props) {
                         <Typography variant="body1" >
                             {row["event_venue"]}
                         </Typography>
-                        {open ? 
-                            <Typography variant="body1" >
-                                Hosted by {row["event_host"]}
-                            </Typography> : <></>}
+                        <Typography variant="body1" >
+                            Hosted by {row["event_host"]}
+                        </Typography>
                     </TableCell>
                     <TableCell sx={{...css.endCell}}>
                         <Box>
