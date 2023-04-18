@@ -941,6 +941,249 @@ const json = [
         "is_event_end_date_estimated": false,
         "event_venue": "Las Vegas Convention Center - Hall N4, Las Vegas",
         "event_link": ""
+    },
+    {
+        "event_id": 84,
+        "event_host": "ADCC",
+        "event_name": "ADCC BOSNIA AND HERZEGOVINA OPEN 2023",
+        "event_start_date": "2023-10-07 00:00:00",
+        "event_end_date": "2023-10-07 00:00:00",
+        "event_venue": "SKPC MEJDAN TUZLA, Bosne Srebrene bb 75000, Tuzla,\nBosnia-Herzegovina",
+        "event_link": "https://adcombat.com/adcc-events/adcc-bosnia-and-herzegovina-open-2023/"
+    },
+    {
+        "event_id": 85,
+        "event_host": "ADCC",
+        "event_name": "ADCC AFRICA CHAMPIONSHIP 2023",
+        "event_start_date": "2023-08-18 00:00:00",
+        "event_end_date": "2023-08-18 00:00:00",
+        "event_venue": "German International School Cape Town, 28 Bay View, Tamboerskloof, Cape Town, 8001,\nSouth Africa",
+        "event_link": "https://adcombat.com/adcc-events/adcc-africa-championship-2023/"
+    },
+    {
+        "event_id": 86,
+        "event_host": "ADCC",
+        "event_name": "ADCC AUSTRALIAN OPEN 2023",
+        "event_start_date": "2023-08-06 00:00:00",
+        "event_end_date": "2023-08-06 00:00:00",
+        "event_venue": "Sutherland Basketball Stadium, Forest Rd & Eton St, Sutherland NSW 2232, Sydney,\nAustralia",
+        "event_link": "https://adcombat.com/adcc-events/adcc-australian-open-2023/"
+    },
+    {
+        "event_id": 87,
+        "event_host": "ADCC",
+        "event_name": "ADCC KAZAKHSTAN OPEN 2023",
+        "event_start_date": "2023-07-31 00:00:00",
+        "event_end_date": "2023-07-31 00:00:00",
+        "event_venue": "Arlan Grip Arena, Almaty,\nKazakhstan",
+        "event_link": "https://adcombat.com/adcc-events/adcc-kazakhstan-open-2023/"
+    },
+    {
+        "event_id": 88,
+        "event_host": "ADCC",
+        "event_name": "ADCC SOUTH EUROPEAN OPEN 2023",
+        "event_start_date": "2023-07-29 00:00:00",
+        "event_end_date": "2023-07-29 00:00:00",
+        "event_venue": "Kresimir Cosic Sports Hall, Splitska ul. 3, 23000, Zadar,\nCroatia",
+        "event_link": "https://adcombat.com/adcc-events/adcc-south-european-open-2023/"
+    },
+    {
+        "event_id": 89,
+        "event_host": "ADCC",
+        "event_name": "ADCC GOLD COAST OPEN 2023",
+        "event_start_date": "2023-07-09 00:00:00",
+        "event_end_date": "2023-07-09 00:00:00",
+        "event_venue": "1525 Gold Coast Hwy, Palm Beach QLD 4221, Tallebudgera Leisure Centre,\nAustralia",
+        "event_link": "https://adcombat.com/adcc-events/adcc-gold-coast-open-2023/"
+    },
+    {
+        "event_id": 90,
+        "event_host": "ADCC",
+        "event_name": "ADCC BAKU OPEN 2023",
+        "event_start_date": "2023-06-25 00:00:00",
+        "event_end_date": "2023-06-25 00:00:00",
+        "event_venue": "Sarhadchi Olimpic Sport Senter, 9XV4+P7W, Mahammad Hadi, Baku,\nAzerbaijan",
+        "event_link": "https://adcombat.com/adcc-events/adcc-baku-open-2023/"
+    },
+    {
+        "event_id": 91,
+        "event_host": "ADCC",
+        "event_name": "ADCC BULGARIA OPEN 2023",
+        "event_start_date": "2023-06-17 00:00:00",
+        "event_end_date": "2023-06-17 00:00:00",
+        "event_venue": "St. George School, Bul. Nikola Vaptsarov 47, zona Hladilnika, Sofia,\nBulgaria",
+        "event_link": "https://adcombat.com/adcc-events/adcc-bulgaria-open-2023/"
+    },
+    {
+        "event_id": 92,
+        "event_host": "ADCC",
+        "event_name": "ADCC CENTRAL EUROPEAN OPEN 2023",
+        "event_start_date": "2023-06-17 00:00:00",
+        "event_end_date": "2023-06-17 00:00:00",
+        "event_venue": "Arena Ursyn\u00f3w, Street Pileckiego 122, Warsaw,\nPoland",
+        "event_link": "https://adcombat.com/adcc-events/adcc-central-european-open-2023/"
+    },
+    {
+        "event_id": 93,
+        "event_host": "ADCC",
+        "event_name": "ADCC SLOVAK NATIONAL 2023",
+        "event_start_date": "2023-06-10 00:00:00",
+        "event_end_date": "2023-06-10 00:00:00",
+        "event_venue": " Sports Hall Dukla, Cesta na, Cesta na \u0161tadi\u00f3n 1271/28, 974 04 Bansk\u00e1 Bystrica,\nSlovakia",
+        "event_link": "https://adcombat.com/adcc-events/adcc-slovak-national-2023/"
+    },
+    {
+        "event_id": 94,
+        "event_host": "ADCC",
+        "event_name": "ADCC PORTUGAL OPEN 2023",
+        "event_start_date": "2023-06-10 00:00:00",
+        "event_end_date": "2023-06-10 00:00:00",
+        "event_venue": "Complexo Desportivo Casal Vistoso, Lisbon,\nPortugal",
+        "event_link": "https://adcombat.com/adcc-events/adcc-portugal-open-2023/"
+    },
+    {
+        "event_id": 95,
+        "event_host": "ADCC",
+        "event_name": "ADCC MELBOURNE OPEN 2023",
+        "event_start_date": "2023-06-04 00:00:00",
+        "event_end_date": "2023-06-04 00:00:00",
+        "event_venue": "Venue: John Donehue Jiu Jitsu & MMA, 6/278 Ferntree Gully Rd, Notting Hill, 3168, Melbourne,\nAustralia",
+        "event_link": "https://adcombat.com/adcc-events/adcc-melbourne-open-2023/"
+    },
+    {
+        "event_id": 96,
+        "event_host": "ADCC",
+        "event_name": "ADCC MACEDONIA OPEN 2023",
+        "event_start_date": "2023-06-04 00:00:00",
+        "event_end_date": "2023-06-04 00:00:00",
+        "event_venue": "Sports center Boris Trajkovski, MK, Boulevard 8-mi Septemvri 13, Skopje 1000,\nMacedonia",
+        "event_link": "https://adcombat.com/adcc-events/adcc-macedonia-open-2023/"
+    },
+    {
+        "event_id": 97,
+        "event_host": "ADCC",
+        "event_name": "ADCC PERTH OPEN 2023",
+        "event_start_date": "2023-05-28 00:00:00",
+        "event_end_date": "2023-05-28 00:00:00",
+        "event_venue": "Craigie Leisure Centre, 751 Whitfords Ave, Craigie WA 6025, Perth,\nAustralia",
+        "event_link": "https://adcombat.com/adcc-events/adcc-perth-open-2023/"
+    },
+    {
+        "event_id": 98,
+        "event_host": "ADCC",
+        "event_name": "ADCC SOUTHEAST ASIA 2023",
+        "event_start_date": "2023-05-27 00:00:00",
+        "event_end_date": "2023-05-27 00:00:00",
+        "event_venue": "Rangsit University, Recreation Building, Pathum Thani, Bangkok 12000,\nThailand",
+        "event_link": "https://adcombat.com/adcc-events/adcc-southeast-asia-2023/"
+    },
+    {
+        "event_id": 99,
+        "event_host": "ADCC",
+        "event_name": "ADCC MOLDOVA OPEN 2023",
+        "event_start_date": "2023-05-27 00:00:00",
+        "event_end_date": "2023-05-27 00:00:00",
+        "event_venue": "Sport HALL -U.S.E.F.S, str.Andrei Doga 22, Chi\u0219in\u0103u,\nMoldova",
+        "event_link": "https://adcombat.com/adcc-events/adcc-moldova-open-2023/"
+    },
+    {
+        "event_id": 100,
+        "event_host": "ADCC",
+        "event_name": "ADCC GERMAN OPEN 2023",
+        "event_start_date": "2023-05-20 00:00:00",
+        "event_end_date": "2023-05-20 00:00:00",
+        "event_venue": "GYM 24, Daimlerstra\u00dfe 13, 71083 Herrenberg,\nGermany",
+        "event_link": "https://adcombat.com/adcc-events/adcc-german-open-2023/"
+    },
+    {
+        "event_id": 101,
+        "event_host": "ADCC",
+        "event_name": "ADCC IRISH OPEN 2023",
+        "event_start_date": "2023-05-20 00:00:00",
+        "event_end_date": "2023-05-20 00:00:00",
+        "event_venue": "Multi Purpose Hall, TUS Athlone Ireland, Dublin Road, Athlone, Co. Westmeath,\nIreland",
+        "event_link": "https://adcombat.com/adcc-events/adcc-irish-open-2023/"
+    },
+    {
+        "event_id": 102,
+        "event_host": "ADCC",
+        "event_name": "ADCC UZBEKISTAN 2023",
+        "event_start_date": "2023-05-19 00:00:00",
+        "event_end_date": "2023-05-19 00:00:00",
+        "event_venue": "Sagbon Sport Complex, Tashkent,\nUzbekistan",
+        "event_link": "https://adcombat.com/adcc-events/adcc-uzbekistan-2023/"
+    },
+    {
+        "event_id": 103,
+        "event_host": "ADCC",
+        "event_name": "ADCC ROSTOV OPEN CUP 2023",
+        "event_start_date": "2023-05-13 00:00:00",
+        "event_end_date": "2023-05-13 00:00:00",
+        "event_venue": "SK DON, Tamansky lane 2 bild 4, Rostov-on-Don,\nRussia",
+        "event_link": "https://adcombat.com/adcc-events/adcc-rostov-open-cup-2023/"
+    },
+    {
+        "event_id": 104,
+        "event_host": "ADCC",
+        "event_name": "ADCC SERBIA OPEN 2023",
+        "event_start_date": "2023-05-06 00:00:00",
+        "event_end_date": "2023-05-06 00:00:00",
+        "event_venue": "Hall 5, Bulevar vojvode Misica 14, Belgrade,\nSerbia",
+        "event_link": "https://adcombat.com/adcc-events/adcc-serbia-open-2023/"
+    },
+    {
+        "event_id": 105,
+        "event_host": "ADCC",
+        "event_name": "ADCC BELGIAN NATIONAL 2023",
+        "event_start_date": "2023-04-29 00:00:00",
+        "event_end_date": "2023-04-29 00:00:00",
+        "event_venue": "ULB - Batiment O, Rue de Lennik 808 1070, Anderlecht,\nBelgium",
+        "event_link": "https://adcombat.com/adcc-events/adcc-belgian-national-2023/"
+    },
+    {
+        "event_id": 106,
+        "event_host": "ADCC",
+        "event_name": "ADCC ROMANIA NATIONAL 2023",
+        "event_start_date": "2023-04-29 00:00:00",
+        "event_end_date": "2023-04-29 00:00:00",
+        "event_venue": "Sala Sporturilor \u201cDumitru Popescu Coliba\u015fi\", Bulevardul Garii 9, Brasov,\nRomania",
+        "event_link": "https://adcombat.com/adcc-events/adcc-romania-national-2023/"
+    },
+    {
+        "event_id": 107,
+        "event_host": "ADCC",
+        "event_name": "ADCC POLISH NATIONALS 2023",
+        "event_start_date": "2023-04-15 00:00:00",
+        "event_end_date": "2023-04-15 00:00:00",
+        "event_venue": "Hala Sportowa L.O. im. S\u0142owackiego, Wawelska 46 street, Warsaw,\nPoland",
+        "event_link": "https://adcombat.com/adcc-events/adcc-polish-nationals-2023/"
+    },
+    {
+        "event_id": 108,
+        "event_host": "ADCC",
+        "event_name": "ADCC LITHUANIA OPEN 2023",
+        "event_start_date": "2023-04-08 00:00:00",
+        "event_end_date": "2023-04-08 00:00:00",
+        "event_venue": "Rungos g. 18A, Elektr\u0117nai,\nLithuania",
+        "event_link": "https://adcombat.com/adcc-events/adcc-lithuania-open-2023/"
+    },
+    {
+        "event_id": 109,
+        "event_host": "ADCC",
+        "event_name": "ADCC CABO TORMENTOSA \u2013 SA 2023",
+        "event_start_date": "2023-03-18 00:00:00",
+        "event_end_date": "2023-03-18 00:00:00",
+        "event_venue": "German International School Cape Town, 28 Bay View, Tamboerskloof, Cape Town, 8001 Cape Town, South Africa,\nSouth Africa",
+        "event_link": "https://adcombat.com/adcc-events/adcc-cabo-tormentosa-sa-2023/"
+    },
+    {
+        "event_id": 110,
+        "event_host": "ADCC",
+        "event_name": "ADCC CZECH OPEN 2023",
+        "event_start_date": "2023-03-18 00:00:00",
+        "event_end_date": "2023-03-18 00:00:00",
+        "event_venue": "Sports Hall Vset\u00edn, Na Lapa\u010di, 755 01 Vset\u00edn,\nCzech Republic",
+        "event_link": "https://adcombat.com/adcc-events/adcc-czech-open-2023/"
     }
 ];
 
