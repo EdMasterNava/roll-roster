@@ -103,7 +103,8 @@ const style = () => ({
         alignItems: 'stretch',
         cursor: 'pointer',
         display: 'flex',   
-        mt: 0.5
+        mt: 0.5,
+        maxWidth: 800
     },
     startCell: {
         justifyContent: 'center',
