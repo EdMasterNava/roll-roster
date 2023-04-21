@@ -145,6 +145,15 @@ const style = () => ({
         display: 'flex', 
         height: 80, 
         width: 90
+    },
+    error: {
+        display: 'block',
+        background: '#e22228',
+        padding: '1rem',
+        borderRadius: '.5rem',
+        textAlign: 'center',
+        my: 1,
+        color: 'white'
     }
 
 
