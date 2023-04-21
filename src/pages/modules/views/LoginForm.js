@@ -9,33 +9,41 @@ import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 import InputLabel from '@mui/material/InputLabel';
 import IconButton from '@mui/material/IconButton';
+import FormControl from '@mui/material/FormControl';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import InputAdornment from '@mui/material/InputAdornment';
-import FormHelperText from '@mui/material/FormHelperText';
-import FormControl, { useFormControl } from '@mui/material/FormControl';
 
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
-import style from '../styles/styles';
+import { useAuth } from '../firebase/AuthContext';
 
-function MyFormHelperText() {
-    const { focused } = useFormControl() || {};
-  
-    const helperText = React.useMemo(() => {
-      if (focused) {
-        return 'Must have 8 characters minimum';
-      }
-  
-      return ' ';
-    }, [focused]);
-  
-    return <FormHelperText>{helperText}</FormHelperText>;
-}
+import style from '../styles/styles';
 
 function LoginForm() {
     const css  = style();
     const png = require('./img/bjj-gym.jpeg');
+    const { login } = useAuth();
+
+    const [userData, setUserData] = React.useState({
+        email: '',
+        password: '',
+        error: '',
+        isLoading: false
+    });
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+        setUserData({ ...userData, [name]: value });
+    }
+    async function handleSubmit(event) {
+        event.preventDefault();
+        try{
+            setUserData({ ...userData, error: '', isLoading: true });
+            await login(userData.email, userData.password);
+        } catch {
+            return setUserData({ ...userData, error: 'Unable To Log In' });
+        }
+    }
 
     const [showPassword, setShowPassword] = React.useState(false);
     const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -57,7 +65,8 @@ function LoginForm() {
                             <Typography variant="h6">
                                 Need a Roll Roster account? <Link to="/join" className="link highlight">Create an account</Link> 
                             </Typography>
-                            <Box component="form" noValidate autoComplete="off">
+                            {userData.error ? <Typography variant="h6" sx={{...css.error}}>{userData.error}</Typography> : <div></div>}
+                            <Box component="form" onSubmit={handleSubmit} id="login">
                                 <FormControl sx={{width: '100%', mt: 3}} variant="outlined">
                                     <InputLabel>Email</InputLabel>
                                     <OutlinedInput
@@ -65,6 +74,9 @@ function LoginForm() {
                                         required
                                         label="Email"
                                         type="email"
+                                        name="email"
+                                        value={userData.email}
+                                        onChange={handleChange}
                                     />
                                 </FormControl>
                                 <FormControl sx={{width: '100%', mt: 6}} variant="outlined">
@@ -74,6 +86,9 @@ function LoginForm() {
                                         required
                                         label="Password"
                                         type={showPassword ? 'text' : 'password'}
+                                        name="password"
+                                        value={userData.password}
+                                        onChange={handleChange}
                                         endAdornment={
                                             <InputAdornment position="end">
                                                 <IconButton
@@ -86,9 +101,8 @@ function LoginForm() {
                                             </InputAdornment>
                                         } 
                                     />
-                                    <MyFormHelperText />
                                 </FormControl>
-                                <Button component="submit" variant='contained' sx={{...css.heroButton, mt: 3, width: '100%'}}>
+                                <Button type="submit" form="login" variant='contained' sx={{...css.heroButton, mt: 3, width: '100%'}}>
                                     <Typography color="white" variant="h6">
                                         Log In
                                     </Typography>

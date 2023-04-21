@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 
 import Typography from '../components/Typography';
+import PasswordHelperText from '../components/PasswordHelperText';
 
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
@@ -9,36 +10,52 @@ import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 import InputLabel from '@mui/material/InputLabel';
 import IconButton from '@mui/material/IconButton';
+import FormControl from '@mui/material/FormControl';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import InputAdornment from '@mui/material/InputAdornment';
-import FormHelperText from '@mui/material/FormHelperText';
-import FormControl, { useFormControl } from '@mui/material/FormControl';
 
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
-import style from '../styles/styles';
+import { useAuth } from '../firebase/AuthContext';
 
-function MyFormHelperText() {
-    const { focused } = useFormControl() || {};
-  
-    const helperText = React.useMemo(() => {
-      if (focused) {
-        return 'Must have 8 characters minimum';
-      }
-  
-      return ' ';
-    }, [focused]);
-  
-    return <FormHelperText>{helperText}</FormHelperText>;
-}
+import style from '../styles/styles';
 
 function JoinForm() {
     const css  = style();
     const png = require('./img/bjj-throw-no-bg2.png');
+    const { join } = useAuth();
+
+    const [userData, setUserData] = React.useState({
+        email: '',
+        password: '',
+        comfimPassword: '',
+        error: '',
+        isLoading: false
+    });
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+        setUserData({ ...userData, [name]: value });
+    }
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        if(userData.password !== userData.comfimPassword){
+            return setUserData({ ...userData, error: 'Passwords Do Not Match' });
+        }
+        if(userData.password.length < 7){
+            return setUserData({ ...userData, error: 'Password Must Be at Least 8 Characters' });
+        }
+        try {
+            setUserData({ ...userData, error: '', isLoading: true });
+            await join(userData.email, userData.password);
+        } catch {
+            return setUserData({ ...userData, error: 'Failed to Create an Account' });
+        }
+        setUserData({ ...userData, isLoading: false });
+    };
 
     const [showPassword, setShowPassword] = React.useState(false);
-    const handleClickShowPassword = () => setShowPassword((show) => !show);
+    const handleClickShowPassword = () => setShowPassword((prev) => !prev);
     const handleMouseDownPassword = (event) => {
         event.preventDefault();
     };
@@ -55,7 +72,8 @@ function JoinForm() {
                                 <Typography variant="h6">
                                     Create a free account or <Link to="/login" className="link highlight">log in</Link> 
                                 </Typography>
-                                <Box component="form" noValidate autoComplete="off">
+                                {userData.error ? <Typography variant="h6" sx={{...css.error}}>{userData.error}</Typography> : <div></div>}
+                                <Box component="form" onSubmit={handleSubmit} id="join">
                                     <FormControl sx={{width: '100%', mt: 3}} variant="outlined">
                                         <InputLabel>Email</InputLabel>
                                         <OutlinedInput
@@ -63,6 +81,9 @@ function JoinForm() {
                                             required
                                             label="Email"
                                             type="email"
+                                            name="email"
+                                            value={userData.email}
+                                            onChange={handleChange}
                                         />
                                     </FormControl>
                                     <FormControl sx={{width: '100%', mt: 6}} variant="outlined">
@@ -72,6 +93,9 @@ function JoinForm() {
                                             required
                                             label="Password"
                                             type={showPassword ? 'text' : 'password'}
+                                            name="password"
+                                            value={userData.password}
+                                            onChange={handleChange}
                                             endAdornment={
                                                 <InputAdornment position="end">
                                                     <IconButton
@@ -84,7 +108,7 @@ function JoinForm() {
                                                 </InputAdornment>
                                             } 
                                         />
-                                        <MyFormHelperText />
+                                        <PasswordHelperText />
                                     </FormControl>
                                     <FormControl sx={{width: '100%', mt: 3}} variant="outlined">
                                         <InputLabel>Confirm Password</InputLabel>
@@ -93,6 +117,9 @@ function JoinForm() {
                                             required
                                             label="Confirm Password"
                                             type={showPassword ? 'text' : 'password'}
+                                            name="comfimPassword"
+                                            value={userData.comfimPassword}
+                                            onChange={handleChange}
                                             endAdornment={
                                                 <InputAdornment position="end">
                                                     <IconButton
@@ -106,7 +133,7 @@ function JoinForm() {
                                             } 
                                         />
                                     </FormControl>
-                                    <Button component="submit" variant='contained' sx={{...css.heroButton, mt: 6, width: '100%'}}>
+                                    <Button type="submit" variant="contained" form="join" disabled={userData.isLoading} sx={{...css.heroButton, mt: 6, width: '100%'}}>
                                         <Typography color="white" variant="h6">
                                             Join
                                         </Typography>
