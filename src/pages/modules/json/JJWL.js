@@ -13,7 +13,7 @@ function switchDate(array){
 function convertDate(string){
     const regex = /(\d{4})-(\d{2})-(\d{2})/;
     const dateString = string;
-    const [_, year, month, day] = dateString.match(regex);
+    const [/* Unused variable placeholder */ , year, month, day] = dateString.match(regex);
     return new Date(parseInt(year), parseInt(month) - 1, parseInt(day)).toJSON();
 }
 
@@ -1187,6 +1187,4 @@ const json = [
     }
 ];
 
-export const jjwlJSON = switchDate(json);
-
-export default { jjwlJSON };
+export default switchDate(json);
