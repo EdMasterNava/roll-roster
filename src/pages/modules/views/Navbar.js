@@ -48,6 +48,7 @@ function Navbar() {
                         Log In
                     </Typography>
                 </Link>
+                <Toolbar/>
                 <Link to="/join" className="link">
                     <Typography variant="h6" sx={{...css.rightNav, display: {xs: 'none', sm: 'flex'}}}>
                         Create Free Account
@@ -62,11 +63,11 @@ function Navbar() {
     function loggedInItems() {
         return (
             <>
-                <a className="logout" onClick={handleLogOut} href="#">
+                <button className="logout link" onClick={handleLogOut} href="#">
                     <Typography variant="h6" sx={{...css.rightNav}}>
                         Log Out
                     </Typography> 
-                </a>
+                </button>
             </>
         )
     }
@@ -85,7 +86,7 @@ function Navbar() {
                     </Typography>
                 </Link>
             </Box>
-            <Box sx={{ ...css.flex, display: 'flex', justifyContent: 'flex-end' }}>
+            <Box sx={{ ...css.flex, display: 'flex', justifyContent: 'flex-end', alignItems: 'center'}}>
                 {currentUser ? loggedInItems() : loggedOutItems()}
             </Box>
           </Toolbar>
