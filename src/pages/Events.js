@@ -25,7 +25,7 @@ function Events() {
         }else{
             setEvents(matchSorter(completeEventList, searchInput, searchKey))
         }
-    }, [searchInput, completeEventList]);
+    }, [searchInput, completeEventList]); 
     const handleSearch = (search) => {
         setSearchInput(search);
     }
