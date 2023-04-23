@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import Typography from '../components/Typography';
 import PasswordHelperText from '../components/PasswordHelperText';
@@ -25,6 +25,7 @@ function JoinForm() {
     const css  = style();
     const png = require('./img/bjj-throw-no-bg2.png');
     const { join } = useAuth();
+    const navigateTo = useNavigate();
 
     const [userData, setUserData] = React.useState({
         email: '',
@@ -48,6 +49,7 @@ function JoinForm() {
         try {
             setUserData({ ...userData, error: '', isLoading: true });
             await join(userData.email, userData.password);
+            navigateTo('/')
         } catch {
             return setUserData({ ...userData, error: 'Failed to Create an Account' });
         }

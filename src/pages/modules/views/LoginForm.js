@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import Typography from '../components/Typography';
 
@@ -23,6 +23,7 @@ import style from '../styles/styles';
 function LoginForm() {
     const css  = style();
     const png = require('./img/bjj-gym.jpeg');
+    const navigateTo = useNavigate();
     const { login } = useAuth();
 
     const [userData, setUserData] = React.useState({
@@ -40,6 +41,7 @@ function LoginForm() {
         try{
             setUserData({ ...userData, error: '', isLoading: true });
             await login(userData.email, userData.password);
+            navigateTo('/');
         } catch {
             return setUserData({ ...userData, error: 'Unable To Log In' });
         }
