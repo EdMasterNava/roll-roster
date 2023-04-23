@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/roll-roster/static/css/main.22acbf3a.css",
+    "main.js": "/roll-roster/static/js/main.0381b744.js",
+    "static/media/jiujitsu.avif": "/roll-roster/static/media/jiujitsu.3af8558998885088b5c8.avif",
+    "static/media/bjj-gym.jpeg": "/roll-roster/static/media/bjj-gym.89b95a745472123dcbcb.jpeg",
+    "static/media/bjj-throw-no-bg2.png": "/roll-roster/static/media/bjj-throw-no-bg2.5d33af9d9ced235d5b4a.png",
+    "index.html": "/roll-roster/index.html",
+    "main.22acbf3a.css.map": "/roll-roster/static/css/main.22acbf3a.css.map",
+    "main.0381b744.js.map": "/roll-roster/static/js/main.0381b744.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.22acbf3a.css",
+    "static/js/main.0381b744.js"
+  ]
+}
