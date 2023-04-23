@@ -2,8 +2,7 @@ const style = () => ({
     rightNav: {
         '&:hover': {
             color: '#5186d5'
-        },
-        marginLeft: 3
+        }
     },
     flex: {
         flex: 1

@@ -79,11 +79,13 @@ svg {
 .row {
   background-color: transparent;
   border: none;
-  width: 100%
+  width: 100%;
 }
 .fullWidth {
   width: 100%;
 }
 .logout {
+  background-color: transparent;
   cursor: pointer;
+  border: none;
 }
