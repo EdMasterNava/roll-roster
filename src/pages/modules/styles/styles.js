@@ -2,8 +2,7 @@ const style = () => ({
     rightNav: {
         '&:hover': {
             color: '#5186d5'
-        },
-        marginLeft: 3
+        }
     },
     flex: {
         flex: 1
@@ -103,7 +102,8 @@ const style = () => ({
         alignItems: 'stretch',
         cursor: 'pointer',
         display: 'flex',   
-        mt: 0.5
+        mt: 0.5,
+        maxWidth: 800
     },
     startCell: {
         justifyContent: 'center',
@@ -144,6 +144,15 @@ const style = () => ({
         display: 'flex', 
         height: 80, 
         width: 90
+    },
+    error: {
+        display: 'block',
+        background: '#e22228',
+        padding: '1rem',
+        borderRadius: '.5rem',
+        textAlign: 'center',
+        my: 1,
+        color: 'white'
     }
 
 

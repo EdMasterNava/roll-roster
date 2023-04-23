@@ -15,7 +15,7 @@ function Search(props) {
     const handleClear = () => {
         setSearch('');
     }
-    React.useEffect(() => {handleSearch(search)}, [search]);
+    React.useEffect(() => { handleSearch(search) }, [search, handleSearch]);
 
     return (
         <>

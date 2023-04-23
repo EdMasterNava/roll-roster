@@ -19,37 +19,36 @@ import CloseIcon from '@mui/icons-material/Close';
 import EventRoundedIcon from '@mui/icons-material/EventRounded';
 import CalendarMonthRoundedIcon from '@mui/icons-material/CalendarMonthRounded';
 
+import { useAuth } from '../firebase/AuthContext';
+
 import style from '../styles/styles';
 
 function Navbar() {
     const css = style();
+
+    const { currentUser, logout } = useAuth();
+    async function handleLogOut(){
+        try {
+            await logout();
+        }catch (error){
+            console.log(error);
+        }
+    }
+
     const [open, setOpen] = React.useState(false);
     const toggleDrawer = () => {
         setOpen(prev => !prev);
     }
-    return (
-      <>
-        <AppBar open={open}>
-          <Toolbar sx={{ justifyContent: 'space-between' }}>
-            <Box sx={{ ...css.flex, display: 'flex' }} >
-                <IconButton size="large" edge="start" color="inherit"  onClick={toggleDrawer}>
-                    {open ? <CloseIcon fontSize="large"/> : <MenuIcon fontSize="large"/>}
-                </IconButton>
-                <Link to="/" className="link center">
-                    <Typography variant="h4">
-                        Roll Roster
-                    </Typography>
-                </Link>
-                
-            </Box>
-            
-            <Box sx={{ ...css.flex, display: 'flex', justifyContent: 'flex-end' }}>
+
+    function loggedOutItems() {
+        return (
+            <>
                 <Link to="/login" className="link">
                     <Typography variant="h6" sx={{...css.rightNav}}>
                         Log In
                     </Typography>
                 </Link>
-                
+                <Toolbar/>
                 <Link to="/join" className="link">
                     <Typography variant="h6" sx={{...css.rightNav, display: {xs: 'none', sm: 'flex'}}}>
                         Create Free Account
@@ -58,6 +57,37 @@ function Navbar() {
                         Join
                     </Typography>
                 </Link>
+            </>
+        )
+    }
+    function loggedInItems() {
+        return (
+            <>
+                <button className="logout link" onClick={handleLogOut} href="#">
+                    <Typography variant="h6" sx={{...css.rightNav}}>
+                        Log Out
+                    </Typography> 
+                </button>
+            </>
+        )
+    }
+
+    return (
+      <>
+        <AppBar open={open}>
+          <Toolbar sx={{ justifyContent: 'space-between' }}>
+            <Box sx={{ ...css.flex, display: 'flex' }} >
+                <IconButton size="large" edge="start" color="inherit" onClick={toggleDrawer}>
+                    {open ? <CloseIcon fontSize="large"/> : <MenuIcon fontSize="large"/>}
+                </IconButton>
+                <Link to="/" className="link center">
+                    <Typography variant="h4">
+                        Roll Roster
+                    </Typography>
+                </Link>
+            </Box>
+            <Box sx={{ ...css.flex, display: 'flex', justifyContent: 'flex-end', alignItems: 'center'}}>
+                {currentUser ? loggedInItems() : loggedOutItems()}
             </Box>
           </Toolbar>
         </AppBar>

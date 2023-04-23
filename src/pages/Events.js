@@ -15,17 +15,17 @@ import { matchSorter } from 'match-sorter';
 import jjwlJSON from './modules/json/JJWL';
 
 function Events() {
-    const completeEventList = jjwlJSON.jjwlJSON;
-    const searchKey = {keys: ["event_name", "event_venue", "event_host"]};
+    const completeEventList = jjwlJSON;
     const [events, setEvents] = React.useState(completeEventList);
     const [searchInput, setSearchInput] = React.useState('');
     React.useEffect(() => {
+        const searchKey = {keys: ["event_name", "event_venue", "event_host"]};
         if(searchInput === ''){
             setEvents(completeEventList);
         }else{
             setEvents(matchSorter(completeEventList, searchInput, searchKey))
         }
-    }, [searchInput]);
+    }, [searchInput, completeEventList]);
     const handleSearch = (search) => {
         setSearchInput(search);
     }
