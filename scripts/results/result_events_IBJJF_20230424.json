@@ -446,8 +446,8 @@
         "event_start_date": "2023-04-29 00:00:00",
         "event_end_date": "2023-04-30 00:00:00",
         "is_event_start_date_estimated": false,
-        "is_event_end_date_estimated": true,
-        "event_venue": "Centre Esportiu Municipal Olimpics Vall d'Hebron, Barcelona",
+        "is_event_end_date_estimated": false,
+        "event_venue": "Complex Esportiu Municipal La Mar Bella, Barcelona",
         "event_link": ""
     },
     {
@@ -706,18 +706,18 @@
     {
         "event_id": 64,
         "event_host": "IBJJF",
-        "event_name": "Fortaleza International Open IBJJF Jiu-Jitsu Championship 2023",
-        "event_start_date": "2023-06-24 00:00:00",
-        "event_end_date": "2023-06-25 00:00:00",
+        "event_name": "Kids International IBJJF Jiu-Jitsu Championship - Houston 2023",
+        "event_start_date": "2023-06-17 00:00:00",
+        "event_end_date": "2023-06-17 00:00:00",
         "is_event_start_date_estimated": false,
         "is_event_end_date_estimated": false,
-        "event_venue": "Gin\u00e1sio Paulo Sarasate, Fortaleza",
+        "event_venue": "The Pavilion - Forest Brook High School, Houston",
         "event_link": ""
     },
     {
         "event_id": 65,
         "event_host": "IBJJF",
-        "event_name": "Fortaleza International Open IBJJF Jiu-Jitsu No-Gi Championship 2023",
+        "event_name": "Fortaleza International Open IBJJF Jiu-Jitsu Championship 2023",
         "event_start_date": "2023-06-24 00:00:00",
         "event_end_date": "2023-06-25 00:00:00",
         "is_event_start_date_estimated": false,
@@ -728,6 +728,39 @@
     {
         "event_id": 66,
         "event_host": "IBJJF",
+        "event_name": "Fortaleza International Open IBJJF Jiu-Jitsu No-Gi Championship 2023",
+        "event_start_date": "2023-06-24 00:00:00",
+        "event_end_date": "2023-06-25 00:00:00",
+        "is_event_start_date_estimated": false,
+        "is_event_end_date_estimated": false,
+        "event_venue": "Gin\u00e1sio Paulo Sarasate, Fortaleza",
+        "event_link": ""
+    },
+    {
+        "event_id": 67,
+        "event_host": "IBJJF",
+        "event_name": "Betim International Open IBJJF Jiu-Jitsu Championship 2023",
+        "event_start_date": "2023-07-01 00:00:00",
+        "event_end_date": "2023-07-02 00:00:00",
+        "is_event_start_date_estimated": false,
+        "is_event_end_date_estimated": false,
+        "event_venue": "Centro Poliesportivo Divino Ferreira Braga, Betim",
+        "event_link": ""
+    },
+    {
+        "event_id": 68,
+        "event_host": "IBJJF",
+        "event_name": "Betim International Open IBJJF Jiu-Jitsu No-Gi Championship 2023",
+        "event_start_date": "2023-07-01 00:00:00",
+        "event_end_date": "2023-07-02 00:00:00",
+        "is_event_start_date_estimated": false,
+        "is_event_end_date_estimated": false,
+        "event_venue": "Centro Poliesportivo Divino Ferreira Braga, Betim",
+        "event_link": ""
+    },
+    {
+        "event_id": 69,
+        "event_host": "IBJJF",
         "event_name": "Asian Jiu-Jitsu IBJJF Championship 2023",
         "event_start_date": "2023-07-07 00:00:00",
         "event_end_date": "2023-07-09 00:00:00",
@@ -737,7 +770,7 @@
         "event_link": ""
     },
     {
-        "event_id": 67,
+        "event_id": 70,
         "event_host": "IBJJF",
         "event_name": "Austin Summer International Open IBJJF Jiu-Jitsu Championship 2023",
         "event_start_date": "2023-07-15 00:00:00",
@@ -748,7 +781,7 @@
         "event_link": ""
     },
     {
-        "event_id": 68,
+        "event_id": 71,
         "event_host": "IBJJF",
         "event_name": "Austin Summer International Open IBJJF Jiu-Jitsu No-Gi Championship 2023",
         "event_start_date": "2023-07-15 00:00:00",
@@ -759,7 +792,29 @@
         "event_link": ""
     },
     {
-        "event_id": 69,
+        "event_id": 72,
+        "event_host": "IBJJF",
+        "event_name": "New Orleans Summer International Open IBJJF Jiu-Jitsu Championship 2023",
+        "event_start_date": "2023-07-15 00:00:00",
+        "event_end_date": "2023-07-16 00:00:00",
+        "is_event_start_date_estimated": false,
+        "is_event_end_date_estimated": false,
+        "event_venue": "The Pontchartrain Convention & Civic Center , Kenner",
+        "event_link": ""
+    },
+    {
+        "event_id": 73,
+        "event_host": "IBJJF",
+        "event_name": "New Orleans Summer International Open IBJJF Jiu-Jitsu No-Gi Championship 2023",
+        "event_start_date": "2023-07-15 00:00:00",
+        "event_end_date": "2023-07-16 00:00:00",
+        "is_event_start_date_estimated": false,
+        "is_event_end_date_estimated": false,
+        "event_venue": "The Pontchartrain Convention & Civic Center, Kenner ",
+        "event_link": ""
+    },
+    {
+        "event_id": 74,
         "event_host": "IBJJF",
         "event_name": "Austin Summer Kids International Open IBJJF Jiu-Jitsu Championship 2023",
         "event_start_date": "2023-07-16 00:00:00",
@@ -770,7 +825,7 @@
         "event_link": ""
     },
     {
-        "event_id": 70,
+        "event_id": 75,
         "event_host": "IBJJF",
         "event_name": "Orlando Summer International Open IBJJF Jiu-Jitsu Championship 2023",
         "event_start_date": "2023-07-19 00:00:00",
@@ -781,7 +836,7 @@
         "event_link": ""
     },
     {
-        "event_id": 71,
+        "event_id": 76,
         "event_host": "IBJJF",
         "event_name": "Orlando Summer International Open IBJJF Jiu-Jitsu No-Gi Championship 2023",
         "event_start_date": "2023-07-19 00:00:00",
@@ -792,7 +847,7 @@
         "event_link": ""
     },
     {
-        "event_id": 72,
+        "event_id": 77,
         "event_host": "IBJJF",
         "event_name": "Pan Kids IBJJF Jiu-Jitsu Championship 2023",
         "event_start_date": "2023-07-21 00:00:00",
@@ -803,7 +858,29 @@
         "event_link": ""
     },
     {
-        "event_id": 73,
+        "event_id": 78,
+        "event_host": "IBJJF",
+        "event_name": "Master International Jiu-Jitsu Championship - South America 2023",
+        "event_start_date": "2023-07-22 00:00:00",
+        "event_end_date": "2023-07-23 00:00:00",
+        "is_event_start_date_estimated": false,
+        "is_event_end_date_estimated": false,
+        "event_venue": "Arena Cel Wenceslau Malta - Parque Ol\u00edmpico da Vila Militar, Rio de Janeiro",
+        "event_link": ""
+    },
+    {
+        "event_id": 79,
+        "event_host": "IBJJF",
+        "event_name": "Campeonato Sul Americano de Jiu-Jitsu - Crian\u00e7as 2023",
+        "event_start_date": "2023-07-29 00:00:00",
+        "event_end_date": "2023-07-30 00:00:00",
+        "is_event_start_date_estimated": false,
+        "is_event_end_date_estimated": false,
+        "event_venue": "Arena Cel. Wenceslau Malta, Rio de Janeiro",
+        "event_link": ""
+    },
+    {
+        "event_id": 80,
         "event_host": "IBJJF",
         "event_name": "Vit\u00f3ria International Open IBJJF Jiu-Jitsu Championship 2023",
         "event_start_date": "2023-08-05 00:00:00",
@@ -814,7 +891,7 @@
         "event_link": ""
     },
     {
-        "event_id": 74,
+        "event_id": 81,
         "event_host": "IBJJF",
         "event_name": "Vit\u00f3ria International Open IBJJF Jiu-Jitsu No-Gi Championship 2023",
         "event_start_date": "2023-08-05 00:00:00",
@@ -825,7 +902,7 @@
         "event_link": ""
     },
     {
-        "event_id": 75,
+        "event_id": 82,
         "event_host": "IBJJF",
         "event_name": "World Master IBJJF Jiu-Jitsu Championship 2023",
         "event_start_date": "2023-08-31 00:00:00",
@@ -836,7 +913,7 @@
         "event_link": ""
     },
     {
-        "event_id": 76,
+        "event_id": 83,
         "event_host": "IBJJF",
         "event_name": "Jiu-Jitsu CON International 2023",
         "event_start_date": "2023-08-31 00:00:00",
@@ -847,7 +924,7 @@
         "event_link": ""
     },
     {
-        "event_id": 77,
+        "event_id": 84,
         "event_host": "IBJJF",
         "event_name": "Jiu-Jitsu CON No-Gi International 2023",
         "event_start_date": "2023-08-31 00:00:00",
@@ -858,7 +935,7 @@
         "event_link": ""
     },
     {
-        "event_id": 78,
+        "event_id": 85,
         "event_host": "IBJJF",
         "event_name": "Jiu-Jitsu CON Novice International 2023",
         "event_start_date": "2023-08-31 00:00:00",
@@ -869,7 +946,7 @@
         "event_link": ""
     },
     {
-        "event_id": 79,
+        "event_id": 86,
         "event_host": "IBJJF",
         "event_name": "Jiu-Jitsu CON Kids International 2023",
         "event_start_date": "2023-09-02 00:00:00",
@@ -880,7 +957,7 @@
         "event_link": ""
     },
     {
-        "event_id": 80,
+        "event_id": 87,
         "event_host": "IBJJF",
         "event_name": "Dublin Fall International Open IBJJF Jiu-Jitsu Championship 2023",
         "event_start_date": "2023-12-02 00:00:00",
@@ -891,7 +968,7 @@
         "event_link": ""
     },
     {
-        "event_id": 81,
+        "event_id": 88,
         "event_host": "IBJJF",
         "event_name": "Dublin Fall International Open IBJJF Jiu-Jitsu No-Gi Championship 2023",
         "event_start_date": "2023-12-02 00:00:00",
@@ -902,7 +979,7 @@
         "event_link": ""
     },
     {
-        "event_id": 82,
+        "event_id": 89,
         "event_host": "IBJJF",
         "event_name": "European Kids IBJJF Jiu-Jitsu Championship 2023",
         "event_start_date": "2023-12-02 00:00:00",
@@ -913,7 +990,7 @@
         "event_link": ""
     },
     {
-        "event_id": 83,
+        "event_id": 90,
         "event_host": "IBJJF",
         "event_name": "World IBJJF Jiu-Jitsu No-Gi Championship 2023",
         "event_start_date": "2023-12-07 00:00:00",

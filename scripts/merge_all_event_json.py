@@ -19,6 +19,7 @@ def merge_JsonFiles(filename, output_json):
 
 if __name__ == "__main__":
     merge_JsonFiles(event_json_files, output_json="./all_result_events.json")
+    print("All event jsons are successfully merged to all_result_events.json")
 
 
 

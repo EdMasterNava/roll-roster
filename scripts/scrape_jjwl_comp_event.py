@@ -57,7 +57,7 @@ options = webdriver.ChromeOptions()
 options.add_argument('--ignore-certificate-errors')
 options.add_argument('--incognito')
 options.add_argument('--headless')
-driver = webdriver.Chrome("/usr/lib/chromium-browser/chromedriver", chrome_options=options)
+driver = webdriver.Chrome("/usr/lib/chromium-browser/chromedriver", options=options)
 
 # 1. Access JJWL championship page and click to display all events using selenium
 driver.get("https://www.jjworldleague.com/")
