@@ -12,10 +12,10 @@ import withRoot from './modules/styles/withRoot';
 
 import { matchSorter } from 'match-sorter';
 
-import jjwlJSON from './modules/json/JJWL';
+import parsedJSON from './modules/json/parseJsonDate';
 
 function Events() {
-    const completeEventList = jjwlJSON;
+    const completeEventList = parsedJSON;
     const [events, setEvents] = React.useState(completeEventList);
     const [searchInput, setSearchInput] = React.useState('');
     React.useEffect(() => {
