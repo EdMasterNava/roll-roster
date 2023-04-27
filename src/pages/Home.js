@@ -1,11 +1,10 @@
 import * as React from 'react';
-
-import Navbar from './modules/views/Navbar';
-import HomeHero from './modules/views/HomeHero';
-import HomeSubHero from './modules/views/HomeSubHero';
-
+//Components used in Page
+import Navbar from './modules/components/Navbar';
+import HomeHero from './modules/components/HomeHero';
+import HomeSubHero from './modules/components/HomeSubHero';
+//Applies Material UI Theme
 import withRoot from './modules/styles/withRoot';
-
 
 function Home() {
     return (

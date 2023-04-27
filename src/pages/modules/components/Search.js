@@ -1,20 +1,26 @@
 import * as React from 'react';
-
-import Paper from '@mui/material/Paper';
-import InputLabel from '@mui/material/InputLabel';
-import FormControl from '@mui/material/FormControl';
-import FilledInput from '@mui/material/FilledInput';
-
+//Material UI components
+import {
+    Paper,
+    InputLabel,
+    IconButton,
+    FormControl,
+    FilledInput
+} from '@mui/material';
+//Material UI icon components
 import CloseIcon from '@mui/icons-material/Close';
 import SearchIcon from '@mui/icons-material/Search';
-import IconButton from '@mui/material/IconButton';
 
 function Search(props) {
+    //Fetching handleSearch from props and asigning to variable handleSearch
     const handleSearch = props.handleSearch;
+    //State to track user search content
     const [search, setSearch] = React.useState('');
+    //resets search to empty string
     const handleClear = () => {
         setSearch('');
     }
+    //Passes search to EventTable
     React.useEffect(() => { handleSearch(search) }, [search, handleSearch]);
 
     return (

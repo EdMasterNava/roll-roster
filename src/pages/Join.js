@@ -1,10 +1,9 @@
 import * as React from 'react';
-
-import Navbar from './modules/views/Navbar';
-import JoinForm from './modules/views/JoinForm';
-
+//Components used in Page
+import Navbar from './modules/components/Navbar';
+import JoinForm from './modules/components/JoinForm';
+//Applies Material UI Theme
 import withRoot from './modules/styles/withRoot';
-
 
 function Join() {
     return (
