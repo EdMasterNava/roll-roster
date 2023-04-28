@@ -33,6 +33,15 @@ function EventTable(props) {
     const sortedMonthsWithEvents = Object.keys(eventsByMonth)
                                          .map(monthInt => parseInt(monthInt))
                                          .sort((a, b) => a - b);
+    //Sort events within existing month
+    const sortEventsWithinMonth = () => {
+        for(let i = 0; i < sortedMonthsWithEvents.length; i++) {
+            eventsByMonth[sortedMonthsWithEvents[i]] = eventsByMonth[sortedMonthsWithEvents[i]].sort((a,b) => {
+                return new Date(a['event_start_date']).getTime() - new Date(b['event_start_date']).getTime();
+            })
+        }
+    }
+    sortEventsWithinMonth();
     //State to track which drawer is open
     const [activeId, setActiveId] = React.useState(-1);
     //Updates activeId 
