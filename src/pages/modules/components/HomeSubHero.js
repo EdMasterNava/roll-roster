@@ -1,14 +1,17 @@
 import * as React from 'react';
-
+//Custom components
 import Typography from '../components/Typography';
-
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import Button from '@mui/material/Button';
-
+//Material UI components
+import {
+    Box,
+    Grid,
+    Button
+} from '@mui/material';
+//Importing CSS to Material UI Components
 import style from '../styles/styles';
 
 function HomeSubHero() {
+    //Assigning style to variable css
     const css  = style();
     return (
         <>

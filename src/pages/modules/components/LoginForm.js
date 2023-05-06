@@ -1,43 +1,55 @@
 import * as React from 'react';
+//Allows for switching between Page endpoints
 import { Link, useNavigate } from 'react-router-dom';
-
+//Custom components
 import Typography from '../components/Typography';
-
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
-import Button from '@mui/material/Button';
-import InputLabel from '@mui/material/InputLabel';
-import IconButton from '@mui/material/IconButton';
-import FormControl from '@mui/material/FormControl';
-import OutlinedInput from '@mui/material/OutlinedInput';
-import InputAdornment from '@mui/material/InputAdornment';
-
-import Visibility from '@mui/icons-material/Visibility';
-import VisibilityOff from '@mui/icons-material/VisibilityOff';
-
+//Material UI components
+import {
+    Box,
+    Grid,
+    Paper,
+    Button,
+    InputLabel,
+    IconButton,
+    FormControl,
+    OutlinedInput,
+    InputAdornment
+} from '@mui/material';
+//Material UI icon components
+import {
+    Visibility,
+    VisibilityOff
+} from '@mui/icons-material';
+//Firebase Auth function
 import { useAuth } from '../firebase/AuthContext';
-
+//Importing CSS to Material UI Components
 import style from '../styles/styles';
 
 function LoginForm() {
+    //Assigning style to variable css
     const css  = style();
+    //Login page picture
     const png = require('./img/bjj-gym.jpeg');
-    const navigateTo = useNavigate();
+    //Extracting login function from Firebase Auth
     const { login } = useAuth();
-
+    //Allows forced endpoint switching
+    const navigateTo = useNavigate();
+    //State to track user form content
     const [userData, setUserData] = React.useState({
         email: '',
         password: '',
         error: '',
         isLoading: false
     });
+    //Updates userData
     const handleChange = (event) => {
         const { name, value } = event.target;
         setUserData({ ...userData, [name]: value });
     }
+    //Submits form
     async function handleSubmit(event) {
         event.preventDefault();
+        //Attempts to login and navigates to homepage if successful
         try{
             setUserData({ ...userData, error: '', isLoading: true });
             await login(userData.email, userData.password);
@@ -46,12 +58,10 @@ function LoginForm() {
             return setUserData({ ...userData, error: 'Unable To Log In' });
         }
     }
-
+    //State for showing password
     const [showPassword, setShowPassword] = React.useState(false);
-    const handleClickShowPassword = () => setShowPassword((show) => !show);
-    const handleMouseDownPassword = (event) => {
-        event.preventDefault();
-    };
+    //Updates showPassword
+    const handleClickShowPassword = () => setShowPassword((prev) => !prev);
     return (
         <>
             <Grid container component="main" sx={{ minHeight: '100vh' }}>
@@ -95,7 +105,6 @@ function LoginForm() {
                                             <InputAdornment position="end">
                                                 <IconButton
                                                     onClick={handleClickShowPassword}
-                                                    onMouseDown={handleMouseDownPassword}
                                                     edge="end"
                                                 >
                                                     { showPassword ? <VisibilityOff /> : <Visibility /> }

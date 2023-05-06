@@ -1,6 +1,7 @@
+//Connecting our App to Firebase
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-
+//Firebase SDK -- values should be kept secret 
 const firebaseConfig = {
     apiKey: "AIzaSyDFrCu9stq36FeS6UdAK8iCk3ZxSZEeC94",
     authDomain: "roll-roster-dev-e7642.firebaseapp.com",

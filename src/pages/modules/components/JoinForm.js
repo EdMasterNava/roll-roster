@@ -1,32 +1,39 @@
 import * as React from 'react';
+//Allows for switching between Page endpoints
 import { Link, useNavigate } from 'react-router-dom';
-
+//Custom components
 import Typography from '../components/Typography';
 import PasswordHelperText from '../components/PasswordHelperText';
-
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
-import Button from '@mui/material/Button';
-import InputLabel from '@mui/material/InputLabel';
-import IconButton from '@mui/material/IconButton';
-import FormControl from '@mui/material/FormControl';
-import OutlinedInput from '@mui/material/OutlinedInput';
-import InputAdornment from '@mui/material/InputAdornment';
-
+//Material UI components
+import {
+    Box,
+    Grid,
+    Paper,
+    Button,
+    InputLabel,
+    IconButton,
+    FormControl,
+    OutlinedInput,
+    InputAdornment
+} from '@mui/material';
+//Material UI icon components
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
-
+//Firebase Auth function
 import { useAuth } from '../firebase/AuthContext';
-
+//Importing CSS to Material UI Components
 import style from '../styles/styles';
 
 function JoinForm() {
+    //Assigning style to variable css
     const css  = style();
+    //Join page picture
     const png = require('./img/bjj-throw-no-bg2.png');
+    //Extracting join function from Firebase Auth
     const { join } = useAuth();
+    //Allows forced endpoint switching
     const navigateTo = useNavigate();
-
+    //State to track user form content
     const [userData, setUserData] = React.useState({
         email: '',
         password: '',
@@ -34,18 +41,23 @@ function JoinForm() {
         error: '',
         isLoading: false
     });
+    //Updates userData
     const handleChange = (event) => {
         const { name, value } = event.target;
         setUserData({ ...userData, [name]: value });
     }
+    //Submits form
     const handleSubmit = async (event) => {
         event.preventDefault();
+        //Checks if password matches comfirms password 
         if(userData.password !== userData.comfimPassword){
             return setUserData({ ...userData, error: 'Passwords Do Not Match' });
         }
+        //Checks if password is at least 8 characters 
         if(userData.password.length < 7){
             return setUserData({ ...userData, error: 'Password Must Be at Least 8 Characters' });
         }
+        //Attempts to create account and navigates to homepage if successful
         try {
             setUserData({ ...userData, error: '', isLoading: true });
             await join(userData.email, userData.password);
@@ -55,12 +67,10 @@ function JoinForm() {
         }
         setUserData({ ...userData, isLoading: false });
     };
-
+    //State for showing password
     const [showPassword, setShowPassword] = React.useState(false);
+    //Updates showPassword
     const handleClickShowPassword = () => setShowPassword((prev) => !prev);
-    const handleMouseDownPassword = (event) => {
-        event.preventDefault();
-    };
     return (
         <>
             <Box sx={{minHeight: '100vh', bgcolor: '#96ddf5'}}>
@@ -102,7 +112,6 @@ function JoinForm() {
                                                 <InputAdornment position="end">
                                                     <IconButton
                                                         onClick={handleClickShowPassword}
-                                                        onMouseDown={handleMouseDownPassword}
                                                         edge="end"
                                                     >
                                                         { showPassword ? <VisibilityOff /> : <Visibility /> }
@@ -126,7 +135,6 @@ function JoinForm() {
                                                 <InputAdornment position="end">
                                                     <IconButton
                                                         onClick={handleClickShowPassword}
-                                                        onMouseDown={handleMouseDownPassword}
                                                         edge="end"
                                                     >
                                                         { showPassword ? <VisibilityOff /> : <Visibility /> }

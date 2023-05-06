@@ -1,3 +1,4 @@
+//Styling applied to Material UI components 
 const style = () => ({
     rightNav: {
         '&:hover': {
@@ -101,9 +102,9 @@ const style = () => ({
         justifyContent: 'space-between', 
         alignItems: 'stretch',
         cursor: 'pointer',
-        display: 'flex',   
-        mt: 0.5,
-        maxWidth: 800
+        display: 'flex',  
+        maxWidth: 800, 
+        mt: 0.5
     },
     startCell: {
         justifyContent: 'center',
@@ -146,15 +147,24 @@ const style = () => ({
         width: 90
     },
     error: {
-        display: 'block',
         background: '#e22228',
-        padding: '1rem',
         borderRadius: '.5rem',
         textAlign: 'center',
-        my: 1,
-        color: 'white'
+        display: 'block',
+        padding: '1rem',
+        color: 'white',
+        my: 1
+    },
+    eventListContainer: {
+        justifyContent: 'center', 
+        flexDirection: 'column',
+        alignItems: 'center',
+        display: 'flex'
+    },
+    eventPageContainer: {
+        py: 2, 
+        px: 1
     }
-
 
 });
 

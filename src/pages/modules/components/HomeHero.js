@@ -1,17 +1,22 @@
 import * as React from 'react';
+//Allows for switching to Page endpoints
 import { Link } from 'react-router-dom';
-
+//Custom components
 import Toolbar from '../components/Toolbar';
 import Typography from '../components/Typography';
-
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import Button from '@mui/material/Button';
-
+//Material UI components
+import {
+    Box,
+    Paper,
+    Button
+} from '@mui/material';
+//Importing CSS to Material UI Components 
 import style from '../styles/styles';
 
 function HomeHero() {
+    //Assigning style to variable css
     const css  = style();
+    //Homepage picture
     const avif = require('./img/jiujitsu.avif');
     return (
         <>

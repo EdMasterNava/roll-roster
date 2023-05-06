@@ -1,32 +1,39 @@
 import * as React from 'react';
+//Allows for switching between Page endpoints
 import { Link } from 'react-router-dom';
-
+//Custom components
 import AppBar from '../components/AppBar';
 import Toolbar from '../components/Toolbar';
 import Typography from '../components/Typography';
-
-import Box from '@mui/material/Box';
-import List from '@mui/material/List';
-import Drawer from '@mui/material/Drawer';
-import ListItem from '@mui/material/ListItem';
-import IconButton from '@mui/material/IconButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import ListItemButton from '@mui/material/ListItemButton';
-
-import MenuIcon from '@mui/icons-material/Menu';
-import CloseIcon from '@mui/icons-material/Close';
-import EventRoundedIcon from '@mui/icons-material/EventRounded';
-import CalendarMonthRoundedIcon from '@mui/icons-material/CalendarMonthRounded';
-
+//Material UI components
+import {
+    Box,
+    List,
+    Drawer,
+    ListItem,
+    IconButton,
+    ListItemIcon,
+    ListItemText,
+    ListItemButton
+} from '@mui/material';
+//Material UI icon components
+import {
+    Menu,
+    Close,
+    EventRounded,
+    CalendarMonthRounded
+} from '@mui/icons-material';
+//Firebase Auth function
 import { useAuth } from '../firebase/AuthContext';
-
+//Importing CSS to Material UI Components
 import style from '../styles/styles';
 
 function Navbar() {
+    //Assigning style to variable css
     const css = style();
-
+    //Extracting currentUser and logout function from Firebase Auth
     const { currentUser, logout } = useAuth();
+    //Attempts to logout user
     async function handleLogOut(){
         try {
             await logout();
@@ -34,13 +41,14 @@ function Navbar() {
             console.log(error);
         }
     }
-
+    //State to open and close sidebar
     const [open, setOpen] = React.useState(false);
+    //Updates open
     const toggleDrawer = () => {
         setOpen(prev => !prev);
     }
-
-    function loggedOutItems() {
+    //Renders apporiate elements when user is logged out
+    const loggedOutItems = () => {
         return (
             <>
                 <Link to="/login" className="link">
@@ -60,7 +68,8 @@ function Navbar() {
             </>
         )
     }
-    function loggedInItems() {
+    //Renders apporiate elements when user is logged in 
+    const loggedInItems = () => {
         return (
             <>
                 <button className="logout link" onClick={handleLogOut} href="#">
@@ -78,7 +87,7 @@ function Navbar() {
           <Toolbar sx={{ justifyContent: 'space-between' }}>
             <Box sx={{ ...css.flex, display: 'flex' }} >
                 <IconButton size="large" edge="start" color="inherit" onClick={toggleDrawer}>
-                    {open ? <CloseIcon fontSize="large"/> : <MenuIcon fontSize="large"/>}
+                    {open ? <Close fontSize="large"/> : <Menu fontSize="large"/>}
                 </IconButton>
                 <Link to="/" className="link center">
                     <Typography variant="h4">
@@ -99,14 +108,14 @@ function Navbar() {
                         <Link to="/events" className="link fullWidth">
                             <ListItemButton onClick={toggleDrawer} sx={{...css.sidebarButtons}}>
                                 <ListItemIcon>
-                                    <EventRoundedIcon />
+                                    <EventRounded />
                                 </ListItemIcon>
                                 <ListItemText primary="Find Events" variant="h6"/>
                             </ListItemButton>
                         </Link>
                         <ListItemButton sx={{...css.sidebarButtons}}>
                             <ListItemIcon>
-                                <CalendarMonthRoundedIcon />
+                                <CalendarMonthRounded />
                             </ListItemIcon>
                             <ListItemText primary="Plan Events" variant="h6"/>
                         </ListItemButton>
